@@ -2,8 +2,6 @@ const express= require("express");
 const app= express();
 const bodyParser=require("body-parser");
 
-
-
 app.get("/", function(req,res){
  res.sendFile(__dirname + "/index.html");
 });
@@ -13,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.post("/", function(req,res){
     console.log(req.body);
-    // pased data is in req.body//
+    // passed data is in req.body//
 
     var num1=Number(req.body.num1);
     var num2=Number(req.body.num2);
